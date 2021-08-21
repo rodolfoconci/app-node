@@ -1,0 +1,10 @@
+.fondoConsultas{
+    height: 55px;
+    background: rgb(46,48,51);
+    background: linear-gradient(180deg, rgba(46,48,51,1) 43%, rgba(81,93,112,1) 100%);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

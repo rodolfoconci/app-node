@@ -1,0 +1,78 @@
+/*INDEX*/
+
+body{
+    font-family: 'Source Sans Pro';
+    position: relative;
+}
+
+img{
+    width: 250px; height: 400px;
+  }
+.preHeader{
+    height: 3vh;
+    background: rgb(52,127,201);
+    background: linear-gradient(180deg, rgba(52,127,201,1) 0%, rgba(14,127,240,1) 25%, rgba(70,144,215,1) 86%);
+}
+
+.alturaBusq{
+    height: 5vh;
+}
+.postFooter{
+    height: 3vh;
+    background: rgb(52,127,201);
+    background: linear-gradient(to top, rgba(52,127,201,1) 0%, rgba(14,127,240,1) 25%, rgba(70,144,215,1) 86%);
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+.logomodal{
+    width: 25px;
+    height: 25px;
+}
+
+.header{
+    justify-content: center;
+}
+
+.consulta{
+    width: 100%;
+    height: 705px;
+    background: url(../images/index.jpg) no-repeat center top;
+    background-size: cover; 
+    filter: blur(5px);
+}
+
+.fondoHeader{
+    background: rgb(178,201,224);
+    background: linear-gradient(180deg, rgba(178,201,224,1) 19%, rgba(188,201,214,1) 28%, rgba(232,237,241,1) 49%);
+}
+
+.fondoFooter{
+    background: rgb(178,201,224);
+    background: linear-gradient(to top, rgba(178,201,224,1) 19%, rgba(188,201,214,1) 28%, rgba(232,237,241,1) 49%);
+}
+
+.colorMenu{
+    background: rgb(178,201,224);
+    background: linear-gradient(180deg, rgba(178,201,224,1) 19%, rgba(188,201,214,1) 28%, rgba(232,237,241,1) 49%);
+}
+
+.modalHeader{
+    background: rgb(255,169,0);
+    background: linear-gradient(180deg, rgba(255,169,0,1) 0%, rgba(255,169,0,1) 47%, rgba(0,0,0,1) 100%);
+}
+
+.modalFooter{
+    background: rgb(46,48,51);
+    background: linear-gradient(180deg, rgba(46,48,51,1) 43%, rgba(81,93,112,1) 100%);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+

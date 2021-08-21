@@ -1,0 +1,64 @@
+body{
+    background: url(../img/fondotaxi1.jpg) no-repeat center top;
+    background-size: cover; 
+    backdrop-filter:blur(4px);
+    font-family: 'Source Sans Pro';
+    height: 100vh;
+}
+
+.loginbox{
+    width: 320px;
+    height: 300px;
+    background:rgba(30, 30, 30, 0.85);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 40px 30px;
+    border-radius: 5px;
+    border: 3px outset goldenrod;
+}
+
+label{
+    font-weight: bold;
+    display: block;
+}
+input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="password"]{
+    border:none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    color: white;
+    height: 30px;
+    font-size: 16px;
+
+     }
+    input[type="submit"]{
+    width: 33%;
+    border:none;
+    outline: none;
+    height: 30px;
+    background: #1d85c4;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    }
+        input[type="submit"]:hover{
+        background: #3275a0;
+        transition-duration: 700ms;
+        width: 40%;
+        }
+
+.iniciosesion{
+padding-bottom: 15px;
+text-align: center;
+font-size: 20px;
+font-weight: bold;
+}
+

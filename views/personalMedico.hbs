@@ -1,0 +1,35 @@
+<div class="container-fluid mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <h1>{{title}}</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+        {{#each medicos}}
+            <div class="col-md-3">
+                <div class="card mb-4 card-prod shadow-sm bg-dark">
+                    <img  src="/images/{{imagen}}" class="card-img" alt="{{nombre}}">
+                    <div class="card-body">
+                        {{#if genero}}
+                        <p class="h4 text-white text-center">Dr. {{nombre}} {{apellido}}</p> 
+                        {{else}}
+                        <p class="h4 text-white text-center">Dra. {{nombre}} {{apellido}}</p> 
+                        {{/if}}
+                        <p class="h4 text-white text-center">{{especialidade.especialidad}}</p>
+                        <div class="row text-center justify-content-center py-2">
+                          <div class="col-sm-6 col-md-6">
+                            <a href="/medicos/{{idMedico}}">
+                            <button class="btn btn-primary">Solicitar Turno</button>
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+    </div>
+
+

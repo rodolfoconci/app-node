@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <h1>Turnos Asignados</h1>
+        </div>
+        <hr>
+    </div>
+    <table class="table table-striped table-hover text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Especialidad</th>
+                <th>Personal Medico</th>
+                <th>Solicitado por</th>
+            </tr>
+        </thead>
+            <tbody>
+                {{#each turnos}}
+                <tr>
+                    <td>{{fechaTurno}}</td>
+                    <td>{{horaTurno.horaTurno}}</td>
+                    <td>{{medico.especialidade.especialidad}}</td>
+                    {{#if medico.genero}}
+                        <td>Dr. {{medico.nombre}} {{medico.apellido}}</td>
+                    {{else}}
+                        <td>Dra. {{medico.nombre}} {{medico.apellido}}</td>
+                    {{/if}}
+                    <td>{{usuario.nombre}} {{usuario.apellido}}</td>
+                </tr>
+               {{/each}} 
+            </tbody>
+            
+    </table>
+
+</div>
+

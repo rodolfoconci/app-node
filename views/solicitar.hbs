@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            {{#if solicitarTurno.genero}}
+            <h1>Dr. {{solicitarTurno.nombre}} {{solicitarTurno.apellido}} - {{solicitarTurno.especialidade.especialidad}}</h1>
+            {{else}}
+            <h1>Dra. {{solicitarTurno.nombre}} {{solicitarTurno.apellido}} - {{solicitarTurno.especialidade.especialidad}}</h1>
+            {{/if}}
+        </div>
+        <hr>
+    </div>
+
+    <form action="" method="post">
+        <div class="row text-center justify-content-around py-2">
+            <div class="col-sm-4 col-md-4">
+                <label for="nombreapellido" class="col-form-label fw-bolder">Personal Medico</label>
+                    {{#if solicitarTurno.genero}}
+                        <input class="form-control form-control-sm" type="text" id="nombreapellido"  name="nombreapellido" value="Dr. {{solicitarTurno.nombre}} {{solicitarTurno.apellido}}" readonly>
+                        <input class="visually-hidden" type="number" id="idMedico"  name="idMedico" value="{{solicitarTurno.idMedico}}">
+                    {{else}}
+                        <input class="form-control form-control-sm" type="text" id="nombreapellido"  name="nombreapellido" value="Dr. {{solicitarTurno.nombre}} {{solicitarTurno.apellido}}" readonly>
+                        <input class="visually-hidden" type="text" id="idMedico"  name="idMedico" value="{{solicitarTurno.idMedico}}">
+                    {{/if}}
+            </div>
+        </div>
+
+        <div class="row text-center justify-content-around py-2">
+            <div class="col-sm-4 col-md-4">
+                <label for="especialidad" class="col-form-label fw-bolder">Especialidad</label>
+                <input class="form-control form-control-sm" type="text" id="especialidad"  name="especialidad" value="{{solicitarTurno.especialidade.especialidad}}" readonly>
+            </div>
+        </div>
+
+        <div class="row text-center justify-content-around py-2">
+            <div class="col-sm-4 col-md-4">
+                <label for="fecha" class="col-form-label fw-bolder">Seleccionar Fecha</label>
+                <input class="form-control form-control-sm"type="date" name="fecha"id="fecha">
+            </div>
+        </div>
+
+        <div class="row text-center justify-content-around py-2">
+            <div class="col-sm-4 col-md-4">
+                <label for="horaturno" class="col-form-label fw-bolder">Seleccionar Horario</label>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm" id="horaturno" name="horaturno">
+                    <option value="0"selected>Seleccione</option>
+                    {{#each selectorHora}}
+                        <option value="{{idhoraTurno}}">{{horaTurno}}</option>";
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+
+        <div class="row text-center justify-content-around py-2 mt-2">
+            
+            <div class="col-sm-4 col-md-4">
+                <button type="submit" class="btn btn-success btn-md" value="Cargar Data">Solicitar</button>
+            </div>
+            
+        </div>
+    </form>
+
+     {{#if alta}}
+        <p class="alert alert-success">
+            Turno solicitado correctamente
+        </p>
+    {{else}}
+        <p class="alert alert-danger">
+            {{error}}
+        </p>    
+    {{/if}}
+</div>
+
